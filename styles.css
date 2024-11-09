@@ -1,0 +1,1881 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+}
+
+/* 导航栏样式 */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: url('Q:/Users/Baitao/桌面/wangzhandaim/相机图片生成.png') center/cover;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
+}
+
+.login-btn {
+    background: #3498db;
+    color: white !important;
+    padding: 0.5rem 1.5rem !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* 轮播图样式 */
+.hero {
+    height: 100vh;
+    position: relative;
+}
+
+.carousel {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container {
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.prev { left: 1rem; }
+.next { right: 1rem; }
+
+/* 欢迎文本样式 */
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.7);
+    padding: 3rem;
+    border-radius: 15px;
+    max-width: 800px;
+}
+
+.welcome-subtitle {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cta-button.primary {
+    background: #3498db;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid white;
+}
+
+.cta-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+/* 通用容器样式 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    padding: 80px 0;
+    min-height: 100vh;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+/* 招募详情样式 */
+.recruitment-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.recruitment-content h3 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.recruitment-content ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+/* 作品展示样式 */
+.gallery-filter {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background: #007bff;
+    color: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-info {
+    padding: 1rem;
+    background: white;
+}
+
+.gallery-info h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.gallery-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.like-btn, .share-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.like-btn {
+    background: #ff4757;
+    color: white;
+}
+
+.share-btn {
+    background: #2ed573;
+    color: white;
+}
+
+.like-btn:hover, .share-btn:hover {
+    opacity: 0.8;
+}
+
+/* 技巧分享样式 */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tip-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tip-content {
+    padding: 1.5rem;
+}
+
+.read-more {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* 社区互动样式 */
+.community-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.discussion-item, .activity-item {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .recruitment-content,
+    .gallery-grid,
+    .tips-grid,
+    .community-content {
+        grid-template-columns: 1fr;
+    }
+} 
+
+/* 在现有的 gallery-info 样式中添加 */
+.photo-description {
+    font-style: italic;
+    color: #666;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* 添加图片加载动画 */
+.gallery-item {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 添加图片加载延迟 */
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+/* 可以继续添加更多延迟... */
+
+/* 添加图片预览模态框样式 */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* 为轮播图第一张图片添加特 */
+.carousel-img {
+    transition: transform 0.5s ease;
+}
+
+.carousel-img:hover {
+    transform: scale(1.02);
+}
+
+/* 为自然风光作品添加特殊效果 */
+.gallery-item[data-category="nature"] img {
+    filter: brightness(1.05) contrast(1.1);
+    transition: all 0.5s ease;
+}
+
+.gallery-item[data-category="nature"]:hover img {
+    filter: brightness(1.1) contrast(1.15);
+}
+
+/* 为自然风光作品的描述添加样式 */
+.gallery-item[data-category="nature"] .photo-description {
+    font-style: italic;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin: 10px 0;
+    padding: 5px;
+    border-left: 3px solid #3498db;
+    background: rgba(52, 152, 219, 0.1);
+}
+
+/* 关于我们页面样式 */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.about-text {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.about-text h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.about-text p {
+    color: #34495e;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.team-members {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.team-members h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.team-member h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* 页脚样式 */
+.footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.footer-section p {
+    color: #ecf0f1;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom p {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .about-text, .team-members {
+        padding: 1.5rem;
+    }
+}
+
+/* 添加动画效果 */
+.about-text, .team-members {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.team-members {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 添加悬停效果 */
+.footer-section p:hover {
+    color: #3498db;
+    cursor: pointer;
+}
+
+.team-member img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 社区互动样式 */
+.discussion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.discussion-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.discussion-item:hover {
+    transform: translateY(-5px);
+}
+
+.discussion-item h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.discussion-meta {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* 活动列表样式 */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.activity-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.activity-item h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.activity-time, .activity-location {
+    color: #34495e;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.activity-description {
+    color: #7f8c8d;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.activity-meta {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.join-activity {
+    width: 100%;
+    padding: 0.8rem;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.join-activity:hover {
+    background: #219a52;
+}
+
+/* 页脚样式增强 */
+.footer {
+    background: linear-gradient(to bottom, #2c3e50, #1a252f);
+    color: #fff;
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section {
+    padding: 0 1rem;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 2px;
+    background: #3498db;
+}
+
+.footer-section p {
+    color: #ecf0f1;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.social-links a:hover {
+    background: #3498db;
+    border-color: #3498db;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 2rem;
+}
+
+.footer-bottom p {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .activity-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-links a {
+        padding: 0.6rem 1.2rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* 添加动画效果 */
+.discussion-item, .activity-item {
+    animation: slideUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 添加动画延迟 */
+.discussion-item:nth-child(1) { animation-delay: 0.1s; }
+.discussion-item:nth-child(2) { animation-delay: 0.2s; }
+.activity-item:nth-child(1) { animation-delay: 0.3s; }
+.activity-item:nth-child(2) { animation-delay: 0.4s; }
+
+/* ���回顶部按钮��� */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-size: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.back-to-top.show {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* 页面滚动动画 */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 活动报名按钮状态 */
+.join-activity.joined {
+    background: #95a5a6;
+    cursor: default;
+}
+
+.join-activity.joined:hover {
+    background: #95a5a6;
+}
+
+/* 私信系统样式 */
+.message-system {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: none;
+}
+
+.message-header {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.message-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.message-item:hover {
+    background: #f8f9fa;
+}
+
+.message-item.unread {
+    background: #e3f2fd;
+}
+
+.message-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.message-input {
+    padding: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.message-input input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.send-message {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* 社交媒体链接样式增强 */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.social-link i {
+    font-size: 1.2rem;
+}
+
+/* 不同社交媒体的特色颜色 */
+.social-link.qq:hover {
+    background: #12B7F5;
+    border-color: #12B7F5;
+}
+
+.social-link.wechat:hover {
+    background: #07C160;
+    border-color: #07C160;
+}
+
+.social-link.weibo:hover {
+    background: #E6162D;
+    border-color: #E6162D;
+}
+
+.social-link.douyin:hover {
+    background: #000000;
+    border-color: #000000;
+}
+
+/* 二维码样式 */
+.qr-codes {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.qr-code {
+    text-align: center;
+}
+
+.qr-code img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    border: 4px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+}
+
+.qr-code:hover img {
+    transform: scale(1.1);
+}
+
+.qr-code p {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .qr-codes {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .social-link {
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* QQ客服悬浮窗样式 */
+.qq-service {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    z-index: 999;
+    display: none;
+}
+
+.qq-service-header {
+    background: #12B7F5;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-qq-service {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.qq-service-content {
+    padding: 15px;
+}
+
+.qq-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.qq-item:last-child {
+    border-bottom: none;
+}
+
+.qq-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.qq-info {
+    flex: 1;
+}
+
+.qq-info p {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.qq-contact-btn {
+    display: inline-block;
+    background: #12B7F5;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 5px;
+    transition: background 0.3s ease;
+}
+
+.qq-contact-btn:hover {
+    background: #0095d9;
+}
+
+/* QQ社交链接特效 */
+.social-link.qq {
+    background: #12B7F5;
+    border-color: #12B7F5;
+}
+
+.social-link.qq:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(18, 183, 245, 0.3);
+}
+
+.social-link.qq-contact {
+    background: #fff;
+    color: #12B7F5;
+    border-color: #12B7F5;
+}
+
+.social-link.qq-contact:hover {
+    background: #12B7F5;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(18, 183, 245, 0.3);
+}
+
+/* 技巧分享卡片增强样式 */
+.tip-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.tip-card img {
+    transition: transform 0.5s ease;
+}
+
+.tip-card:hover img {
+    transform: scale(1.05);
+}
+
+.tip-content {
+    position: relative;
+    background: white;
+    padding: 1.5rem;
+}
+
+.tip-content h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.tip-author {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.tip-excerpt {
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.read-more {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.read-more:hover {
+    background: #2980b9;
+    transform: translateX(5px);
+}
+
+/* 添加阅读更多按钮的箭头 */
+.read-more::after {
+    content: ' →';
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    transform: translateX(-5px);
+}
+
+.read-more:hover::after {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* 加入表单模态框样式 */
+.join-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1100;
+}
+
+.join-modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+
+.join-form {
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #2980b9;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .join-modal-content {
+        margin: 10% auto;
+        padding: 1.5rem;
+    }
+}
+
+/* 活动图片样式 */
+.activity-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 1rem;
+}
+
+.activity-item {
+    overflow: hidden;
+}
+
+/* QQ群信息样式增强 */
+.qq-group-info {
+    background: linear-gradient(45deg, #12B7F5, #1E88E5);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    margin: 20px auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(18, 183, 245, 0.3);
+    cursor: pointer;
+    animation: float 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 100;
+}
+
+.qq-group-info i {
+    font-size: 1.6rem;
+    animation: bounce 2s infinite;
+}
+
+/* 呼吸动画 */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 4px 15px rgba(18, 183, 245, 0.3);
+    }
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 25px rgba(18, 183, 245, 0.4);
+    }
+}
+
+/* QQ图标跳动动画 */
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* 悬停效果 */
+.qq-group-info:hover {
+    background: linear-gradient(45deg, #1E88E5, #12B7F5);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(18, 183, 245, 0.5);
+}
+
+/* 添加点击效果 */
+.qq-group-info:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 10px rgba(18, 183, 245, 0.3);
+}
+
+/* 确保在欢迎文本中居中显示 */
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+/* 招募详情图片样式 */
+.recruitment-banner {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.recruitment-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.recruitment-banner:hover .recruitment-image {
+    transform: scale(1.05);
+}
+
+/* 登录/注册模态框样式 */
+.auth-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1100;
+}
+
+.auth-modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-auth-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.auth-tab.active {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+.auth-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.auth-submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-submit-btn:hover {
+    background: #2980b9;
+}
+
+/* 调整logo部分的样式 */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.logo span {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* QQ群链接样式 */
+.qq-group-link {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.qq-group-info:hover .qq-group-link {
+    color: white;
+}
+
+.qq-group-link i {
+    font-size: 1.6rem;
+}
+
+/* 点赞按钮样式增强 */
+.like-btn {
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #ff4757;
+    color: white;
+}
+
+.like-btn.liked {
+    background: #ff6b81;
+}
+
+/* 点赞动画 */
+.like-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.5rem;
+    pointer-events: none;
+    animation: likeFloat 1s ease-out forwards;
+}
+
+@keyframes likeFloat {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -200%) scale(1.5);
+    }
+}
+
+/* 点赞按钮悬停效果 */
+.like-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(255, 71, 87, 0.3);
+}
+
+.like-btn:active {
+    transform: scale(0.95);
+}
+
+/* 分享按钮样式修改 */
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #2ed573;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.share-btn:hover {
+    background: #26af5f;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(46, 213, 115, 0.3);
+}
+
+.share-btn i {
+    font-size: 1.1rem;
+}
+
+/* 退出登录按钮样式 */
+.logout-btn {
+    padding: 0.5rem 1rem;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* 修改关于我们部分的样式 */
+#about {
+    background: url('Q:/Users/Baitao/桌面/wangzhandaim/相机图片生成.png') center/cover fixed;
+    position: relative;
+    padding: 80px 0;
+}
+
+/* 添加一个半透明遮罩，确保文字清晰可见 */
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+/* 确保内容在遮罩层之上 */
+#about .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* 调整文字颜色和阴影，加可读性 */
+#about .section-title {
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+#about .about-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 修改社区互动部分的样式 */
+#community {
+    background: url('Q:/Users/Baitao/桌面/wangzhandaim/98E1C4FE28639153091D3E0934E1B2B6.jpg') center/cover fixed;
+    position: relative;
+    padding: 80px 0;
+}
+
+/* ��加半透明遮罩 */
+#community::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+/* 确保内容在遮罩层之上 */
+#community .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* 调整文字和卡片样式 */
+#community .section-title {
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+#community .discussion-item,
+#community .activity-item {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 修改招募详情部分的样式 */
+#recruitment {
+    background: url('Q:/Users/Baitao/桌面/wangzhandaim/D977704274D92D135A6FC4849172692F.jpg') center/cover fixed;
+    position: relative;
+    padding: 80px 0;
+}
+
+/* 添加半透明遮罩 */
+#recruitment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+/* 确保内容在遮罩层之上 */
+#recruitment .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* 调整文字和标题样式 */
+#recruitment .section-title {
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+#recruitment .recruitment-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+#recruitment h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+/* 修改作品展示部分的样式 */
+#gallery {
+    background: url('Q:/Users/Baitao/桌面/wangzhandaim/DE497DC53BA8CBC7A2F89758F35D4845.jpg') center/cover fixed;
+    position: relative;
+    padding: 80px 0;
+}
+
+/* 添加半透明遮罩 */
+#gallery::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+/* 确保内容在遮罩层之上 */
+#gallery .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* 调整文字和标题样式 */
+#gallery .section-title {
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+#gallery .gallery-grid {
+    position: relative;
+    z-index: 2;
+}
+
+#gallery .gallery-filter {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+/* 修改摄影技巧分享部分的样式 */
+#tips {
+    background: url('Q:/Users/Baitao/桌面/wangzhandaim/EC0165822CC7FE7B2C2432085DF22F92.jpg') center/cover fixed;
+    position: relative;
+    padding: 80px 0;
+}
+
+/* 添加半透明遮罩 */
+#tips::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+/* 确保内容在遮罩层之上 */
+#tips .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* 调整文字和标题样式 */
+#tips .section-title {
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+#tips .tips-grid {
+    position: relative;
+    z-index: 2;
+}
+
+#tips .tip-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}

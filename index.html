@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摄影爱好者社区</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏增强 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/imgs/logo.jpg" alt="摄影社区" class="logo-img">
+                <span>摄影社区</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">首页</a></li>
+                <li><a href="#recruitment">招募详情</a></li>
+                <li><a href="#gallery">作品展示</a></li>
+                <li><a href="#tips">技巧分享</a></li>
+                <li><a href="#community">社区互动</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li class="nav-button"><a href="#" class="login-btn">登录/注册</a></li>
+            </ul>
+            <div class="mobile-menu">☰</div>
+            <div class="nav-icons">
+                <div class="message-icon">
+                    <i class="fas fa-envelope"></i>
+                    <span class="message-count">2</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 添加私信系统 -->
+    <div class="message-system" id="messageSystem">
+        <div class="message-header">
+            <h3>私信</h3>
+            <button class="close-messages">×</button>
+        </div>
+        <div class="message-list">
+            <div class="message-item unread">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/imgs/user1.jpg" alt="用户头像">
+                <div class="message-content">
+                    <h4>摄影达人</h4>
+                    <p>您好，想请教一下关于夜景拍摄的问题...</p>
+                    <span class="message-time">10分钟前</span>
+                </div>
+            </div>
+        </div>
+        <div class="message-input">
+            <input type="text" placeholder="输入消息...">
+            <button class="send-message">发送</button>
+        </div>
+    </div>
+
+    <!-- 轮播图部分 -->
+    <section id="home" class="hero">
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/53F180A372DD6978EED1ED5A5A1D1F1B.jpg" alt="晨曦中的山峦" class="carousel-img">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/6945496D360C843F85DAED33BB83D301.jpg" alt="自然风光" class="carousel-img">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/31E1A0666E9326CD20D6EE3A5A1D1F1B.jpg" alt="城市风光">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/1057D85A30932CC859E79004DDFCD617.jpg" alt="人文风景">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/4FFF1C7DD30CC6BDD97CD96DAA56AF3E.jpg" alt="风景摄影" class="carousel-img">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/792F357FE6172A9C88295E1B370EC5CE.jpg" alt="自然美景" class="carousel-img">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/B9C62E42FEBFBFD1AC2635CD88F00A1D.jpg" alt="风光摄影" class="carousel-img">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/B03566B939B56756D723D1168C07C2A0.jpg" alt="自然风光" class="carousel-img">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/75FD90F8DEFE57CF5CBA6D56AF48659F.jpg" alt="风景摄影" class="carousel-img">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/E07D96AEA8282EF5D40F331B98C37341.jpg" alt="自然风光" class="carousel-img">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/4A3385C261BC64831F93319CB0877F59.jpg" alt="风景摄影" class="carousel-img">
+            </div>
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+        </div>
+        
+        <div class="welcome-text">
+            <h1>探索摄影的无限可能</h1>
+            <p class="welcome-subtitle">这里是摄影爱好者的聚集地，让我们一起定格精彩瞬间</p>
+            <div class="qq-group-info">
+                <a href="https://qm.qq.com/cgi-bin/qm/qr?k=873450278" target="_blank" class="qq-group-link">
+                    <i class="fab fa-qq"></i>
+                    <span>摄影交流群：873450278</span>
+                </a>
+            </div>
+            <div class="cta-buttons">
+                <button class="cta-button primary" id="joinUsBtn">立即加入我们</button>
+                <button class="cta-button secondary" onclick="location.href='#recruitment'">了解更多</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 修改招募详情部分 -->
+    <section id="recruitment" class="section">
+        <div class="container">
+            <h2 class="section-title">招募详情</h2>
+            <div class="recruitment-banner">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/2470F0CC6D8210EF06415FF49F56B77D.jpg" alt="招募详情" class="recruitment-image">
+            </div>
+            <div class="recruitment-content">
+                <div class="recruitment-purpose">
+                    <h3>招募目的</h3>
+                    <p>我们旨在汇聚来自全国各地的摄影爱好者，共同创建一个活跃、多元、富有创意的摄影交流社区。通过组织各类线上线下摄影活动，提升大家的摄影水平，促进摄影文化的传播。</p>
+                </div>
+                
+                <div class="recruitment-requirements">
+                    <h3>招募要求</h3>
+                    <ul>
+                        <li>对摄影器材没有硬性限制，手机、相机均可</li>
+                        <li>具备基础的摄影知识，能够熟练操作拍摄设备</li>
+                        <li>热爱摄影，积极参与活动和分享作品</li>
+                        <li>具备良好的团队合作精神和沟通能力</li>
+                    </ul>
+                </div>
+
+                <div class="recruitment-benefits">
+                    <h3>加入权益</h3>
+                    <ul>
+                        <li>免费参与定期摄影讲座和线上培训课程</li>
+                        <li>优先参与全国性摄影采风活动</li>
+                        <li>作品有机会在首页展示并推广</li>
+                        <li>与知名摄影大师互动交流的机会</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 修改作品展示部分 -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">作品展示</h2>
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-category="all">全部</button>
+                <button class="filter-btn" data-category="nature">自然风光</button>
+                <button class="filter-btn" data-category="city">城市风光</button>
+                <button class="filter-btn" data-category="portrait">人物肖像</button>
+                <button class="filter-btn" data-category="creative">创意摄影</button>
+            </div>
+            <div class="gallery-grid">
+                <!-- 自然风光 - 晨曦山巅 -->
+                <div class="gallery-item" data-category="nature">
+                    <img src="Q:/Users/Baitao/桌面/wangzhandaim/7BD3AFAD07CC7A55FC6E8DF5B74EA6B9.jpg" alt="晨曦山巅">
+                    <div class="gallery-info">
+                        <h4>晨曦山巅</h4>
+                        <p>拍摄地点：武功山</p>
+                        <p>拍摄时间2024��春</p>
+                        <p class="photo-description">清晨的第一缕阳光洒在山峦之间，云雾缭绕，宛如仙境</p>
+                        <div class="gallery-actions">
+                            <button class="like-btn">❤ 点赞</button>
+                            <a href="tencent://message/?uin=873450278&Site=&Menu=yes" class="share-btn" target="_blank">
+                                <i class="fab fa-qq"></i> 分享到QQ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 城市风光 - 都市剪影 -->
+                <div class="gallery-item" data-category="city">
+                    <img src="Q:/Users/Baitao/桌面/wangzhandaim/31E1A0666E9326CD20D6EE3A5A1D1F1B.jpg" alt="都市剪影">
+                    <div class="gallery-info">
+                        <h4>都市剪影</h4>
+                        <p>拍摄地点：城市街头</p>
+                        <p>拍摄时间：2024年春</p>
+                        <p class="photo-description">现代都市的繁华与静谧，霓虹灯光勾勒出城市的轮廓</p>
+                        <div class="gallery-actions">
+                            <button class="like-btn">❤ 点赞</button>
+                            <button class="share-btn">分享</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 人 - 态 -->
+                <div class="gallery-item" data-category="portrait">
+                    <img src="Q:/Users/Baitao/桌面/wangzhandaim/1057D85A30932CC859E79004DDFCD617.jpg" alt="人间百态">
+                    <div class="gallery-info">
+                        <h4>人间百态</h4>
+                        <p>拍摄地点：街头巷尾</p>
+                        <p>拍摄时间：2024年春</p>
+                        <p class="photo-description">捕捉生活中的精彩瞬间，记录平凡生活中的动人故事</p>
+                        <div class="gallery-actions">
+                            <button class="like-btn">❤ 点赞</button>
+                            <button class="share-btn">分享</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 创意摄影 - 光影魔术 -->
+                <div class="gallery-item" data-category="creative">
+                    <img src="Q:/Users/Baitao/桌面/wangzhandaim/7BD3AFAD07CC7A55FC6E8DF5B74EA6B9.jpg" alt="光影魔术">
+                    <div class="gallery-info">
+                        <h4>光影魔术</h4>
+                        <p>拍摄地点：创意空间</p>
+                        <p>拍摄时间：2024年春</p>
+                        <p class="photo-description">用光与影编织梦幻，创造独特的视觉体验</p>
+                        <div class="gallery-actions">
+                            <button class="like-btn">❤ 点赞</button>
+                            <button class="share-btn">分享</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 添加新的作品 -->
+                <div class="gallery-item" data-category="nature">
+                    <img src="Q:/Users/Baitao/桌面/wangzhandaim/CB0CD0E8F87409EFE08A312FC2822C58.jpg" alt="自然风光">
+                    <div class="gallery-info">
+                        <h4>山水之间</h4>
+                        <p>拍摄地点：山水之间</p>
+                        <p>拍摄时间：2024年春</p>
+                        <p class="photo-description">大自然的鬼斧神工，壮丽的山水画卷</p>
+                        <div class="gallery-actions">
+                            <button class="like-btn">❤ 点赞</button>
+                            <button class="share-btn">分享</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 在 gallery-grid 中添加新的作品 -->
+                <div class="gallery-item" data-category="nature">
+                    <img src="Q:/Users/Baitao/桌面/wangzhandaim/3C60EBC82B7848ED1C266530019EBF6D.jpg" alt="自然风光">
+                    <div class="gallery-info">
+                        <h4>山水画卷</h4>
+                        <p>拍摄地点：山水之间</p>
+                        <p>拍摄时间：2024年春</p>
+                        <p class="photo-description">云雾缭绕的山峦，如诗如画的自然美景</p>
+                        <div class="gallery-actions">
+                            <button class="like-btn">❤ 点赞</button>
+                            <button class="share-btn">分享</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 修改技巧分享部分 -->
+    <section id="tips" class="section">
+        <div class="container">
+            <h2 class="section-title">摄影技巧分享</h2>
+            <div class="tips-grid">
+                <article class="tip-card">
+                    <img src="Q:/Users/Baitao/桌面/wangzhandaim/未标题-1.png" alt="光圈技巧">
+                    <div class="tip-content">
+                        <h3>光圈的艺术：如何运用景深</h3>
+                        <p class="tip-author">作者：摄影师小王</p>
+                        <p class="tip-excerpt">了解光圈的原理，掌景深控制让你的照片更具艺术感。本文将详细介绍光圈大小对照片的影响，以及如何根据不同场景选择合适的光圈值。</p>
+                        <button class="read-more">阅读更多</button>
+                    </div>
+                </article>
+                
+                <article class="tip-card">
+                    <img src="Q:/Users/Baitao/桌面/wangzhandaim/B955AB5DC2A95DF93A61306BA841961B.jpg" alt="构图技巧">
+                    <div class="tip-content">
+                        <h3>构图的秘密：让照片更有张力</h3>
+                        <p class="tip-author">作者：摄影师小李</p>
+                        <p class="tip-excerpt">黄金分、三分法、对称构图基本原则，会如何在不同场景下运用这些技巧，提升照片的觉效果。</p>
+                        <button class="read-more">阅读更多</button>
+                    </div>
+                </article>
+                
+                <article class="tip-card">
+                    <img src="Q:/Users/Baitao/桌面/wangzhandaim/D6D836DDEEB02BE1A007A5E4374D2079.jpg" alt="用光技巧">
+                    <div class="tip-content">
+                        <h3>自然光的运用：寻找最佳光线</h3>
+                        <p class="tip-author">者：摄影师大山</p>
+                        <p class="tip-excerpt">探索如何利用自然光拍摄，包括黄金时间、蓝调时间的特点，以及不同天气条件下的用光技巧。</p>
+                        <button class="read-more">阅读更多</button>
+                    </div>
+                </article>
+
+                <article class="tip-card">
+                    <img src="Q:/Users/Baitao/桌面/wangzhandaim/D977704274D92D135A6FC4849172692F.jpg" alt="后期处理">
+                    <div class="tip-content">
+                        <h3>后期处理：提升照片质感</h3>
+                        <p class="tip-author">作者：后期大师阿杰</p>
+                        <p class="tip-excerpt">从RAW文件到成片的完整修图流程，包括色彩调整、局部修饰、风格塑造等专业技巧。</p>
+                        <button class="read-more">阅读更多</button>
+                    </div>
+                </article>
+
+                <!-- 在 tips-grid 中添加新的技巧卡片 -->
+                <article class="tip-card">
+                    <img src="Q:/Users/Baitao/桌面/wangzhandaim/EF0DBEB1C2B9D139AB307C36B47FEE46.jpg" alt="摄影技巧">
+                    <div class="tip-content">
+                        <h3>风光摄影：捕捉自然之美</h3>
+                        <p class="tip-author">作者：风光摄影师小张</p>
+                        <p class="tip-excerpt">探索如何在不同时间、同天气条件下拍摄壮丽的自然风光，掌握风光摄影的构图和曝光技巧。</p>
+                        <button class="read-more">阅读更多</button>
+                    </div>
+                </article>
+
+                <!-- 在 tips-grid 中添加新的技巧卡片 -->
+                <article class="tip-card">
+                    <img src="Q:/Users/Baitao/桌面/wangzhandaim/IMG_5936.JPG" alt="摄影技巧">
+                    <div class="tip-content">
+                        <h3>摄影器材：选择合适的装备</h3>
+                        <p class="tip-author">作者：器材专家小陈</p>
+                        <p class="tip-excerpt">从入门到专业，如何选择适合自己的摄影器材，包括相机机身、镜头选择以及配件推荐。</p>
+                        <button class="read-more">阅读更多</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 继续社区互动部分 -->
+    <section id="community" class="section">
+        <div class="container">
+            <h2 class="section-title">社区互动</h2>
+            <div class="community-content">
+                <div class="discussion-board">
+                    <h3>热门讨论</h3>
+                    <div class="discussion-list">
+                        <div class="discussion-item">
+                            <h4>春季最佳拍摄地点推荐</h4>
+                            <p class="discussion-meta">发起人：影达人 | 回复：32</p>
+                        </div>
+                        <!-- 添加更多讨论主题... -->
+                    </div>
+                </div>
+                
+                <div class="activities">
+                    <h3>近期活动</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <img src="Q:/Users/Baitao/桌面/wangzhandaim/F3BA7AB0B70A775C687E13541D2DD773.jpg" alt="城市夜景摄影工作坊" class="activity-image">
+                            <h4>城市夜景摄影工作坊</h4>
+                            <p class="activity-time">时：2024年4月15日 19:00-22:00</p>
+                            <p class="activity-location">地点：上海外滩</p>
+                            <p class="activity-description">专业摄影师带队，现场指导夜景拍摄技巧，提供三脚架等器材。</p>
+                            <div class="activity-meta">
+                                <span class="participants">已报名：15/20人</span>
+                                <span class="fee">费用：免费</span>
+                            </div>
+                            <button class="join-activity">报名参加</button>
+                        </div>
+
+                        <div class="activity-item">
+                            <img src="Q:/Users/Baitao/桌面/wangzhandaim/IMG_6582[1].jpg" alt="春季人像外拍活动" class="activity-image">
+                            <h4>春季人像外拍活动</h4>
+                            <p class="activity-time">时间：2024年4月20日 14:00-17:00</p>
+                            <p class="activity-location">地点：世纪公园</p>
+                            <p class="activity-description">专业模特配合，打造唯美春季人像作品。</p>
+                            <div class="activity-meta">
+                                <span class="participants">已报名：8/15人</span>
+                                <span class="fee">费用：50元/人</span>
+                            </div>
+                            <button class="join-activity">报名参加</button>
+                        </div>
+
+                        <div class="activity-item">
+                            <img src="Q:/Users/Baitao/桌面/wangzhandaim/8891E50DA6BBE08F9E4ED7C6B5BAB4E9.jpg" alt="后期修图大师课" class="activity-image">
+                            <h4>后期图大师课</h4>
+                            <p class="activity-time">时间：2024年4月25日 19:30-21:30</p>
+                            <p class="activity-location">地点：线上直播</p>
+                            <p class="activity-description">专业后期讲师教学，从RAW文件到成片的完整修图流程。</p>
+                            <div class="activity-meta">
+                                <span class="participants">已报名：56/100人</span>
+                                <span class="fee">费用：88元/人</span>
+                            </div>
+                            <button class="join-activity">报名参加</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 添加关于我们部分 -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">关于我们</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>我们的故事</h3>
+                    <p>我们是由一群热爱摄影的专业人士和爱好者共同创建的平台，致力于为广大摄爱好者提供一个优质的交流平台。</p>
+                    <p>我们的愿景是打造成为全国乃至全球知名的摄影社区，让每一个热爱摄影的人都能在这里找到归属感。</p>
+                </div>
+                <div class="team-members">
+                    <h3>核心团队</h3>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="Q:/Users/Baitao/桌面/wangzhandaim/2C81478D10650C9BC1C711DAB69343E7.png" alt="团队成员">
+                            <h4>张三</h4>
+                            <p>创始人 / 摄影总监</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="Q:/Users/Baitao/桌面/wangzhandaim/BE05F7709CB1E6C3DCAA7D626F171AB4.jpg" alt="团队成员">
+                            <h4>李四</h4>
+                            <p>技术总监</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p>邮箱：LiuBaitao2020@outlook.com</p>
+                    <p>电话：123-456-7890</p>
+                    <p>QQ群：873450278</p>
+                </div>
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <div class="social-links">
+                        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=873450278" class="social-link qq" target="_blank">
+                            <i class="fab fa-qq"></i>
+                            加入QQ群
+                        </a>
+                        <a href="#" class="social-link qq-contact">
+                            <i class="fab fa-qq"></i>
+                            联系客服QQ
+                        </a>
+                        <a href="#" class="social-link wechat">
+                            <i class="fab fa-weixin"></i>
+                            微信
+                        </a>
+                        <a href="#" class="social-link weibo">
+                            <i class="fab fa-weibo"></i>
+                            微博
+                        </a>
+                        <a href="#" class="social-link douyin">
+                            <i class="fab fa-tiktok"></i>
+                            抖音
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>扫码关注</h3>
+                    <div class="qr-codes">
+                        <div class="qr-code">
+                            <img src="Q:/Users/Baitao/桌面/wangzhandaim/imgs/qq-qr.jpg" alt="QQ群：873450278">
+                            <p>QQ群：873450278</p>
+                        </div>
+                        <div class="qr-code">
+                            <img src="Q:/Users/Baitao/桌面/wangzhandaim/imgs/wechat-qr.jpg" alt="微信公众号">
+                            <p>微信公众号</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 摄影社区 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 添加QQ客悬浮窗 -->
+    <div class="qq-service">
+        <div class="qq-service-header">
+            <h4>在线客服</h4>
+            <span class="close-qq-service">×</span>
+        </div>
+        <div class="qq-service-content">
+            <div class="qq-item">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/imgs/qq-avatar1.jpg" alt="客服小美">
+                <div class="qq-info">
+                    <p>客服小美</p>
+                    <a href="tencent://message/?uin=123456789" class="qq-contact-btn">
+                        <i class="fab fa-qq"></i> 联系QQ
+                    </a>
+                </div>
+            </div>
+            <div class="qq-item">
+                <img src="Q:/Users/Baitao/桌面/wangzhandaim/imgs/qq-avatar2.jpg" alt="客服小王">
+                <div class="qq-info">
+                    <p>技术支持</p>
+                    <a href="tencent://message/?uin=987654321" class="qq-contact-btn">
+                        <i class="fab fa-qq"></i> 联系QQ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加加入表单模态框 -->
+    <div class="join-modal" id="joinModal">
+        <div class="join-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>加入我们</h2>
+            <form id="joinForm" class="join-form">
+                <div class="form-group">
+                    <label for="name">姓</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">手机号码</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="camera">使用的相机型号</label>
+                    <input type="text" id="camera" name="camera">
+                </div>
+                <div class="form-group">
+                    <label for="experience">摄影经验</label>
+                    <select id="experience" name="experience">
+                        <option value="beginner">新手门</option>
+                        <option value="intermediate">业余爱好者</option>
+                        <option value="advanced">专业摄影师</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">加入理由</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">提交申请</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 添加登录/注册模态框 -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal-content">
+            <span class="close-auth-modal">&times;</span>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">登录</button>
+                <button class="auth-tab" data-tab="register">注册</button>
+            </div>
+            
+            <!-- 登录表单 -->
+            <form id="loginForm" class="auth-form active">
+                <div class="form-group">
+                    <label for="loginEmail">电子邮件</label>
+                    <input type="email" id="loginEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">密码</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <button type="submit" class="auth-submit-btn">登录</button>
+            </form>
+
+            <!-- 注册表单 -->
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="registerName">姓名</label>
+                    <input type="text" id="registerName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">电子邮件</label>
+                    <input type="email" id="registerEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">密码</label>
+                    <input type="password" id="registerPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">确认密码</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit" class="auth-submit-btn">注册</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
